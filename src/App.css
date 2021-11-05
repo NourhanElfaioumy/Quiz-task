@@ -1,38 +1,59 @@
-.App {
+body {
+  background: #007bff;
+}
+.quiz_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.quiz_box.activeQuiz {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.que_text {
+  font-size: 25px;
+  font-weight: 600;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.option_list {
+  padding: 20px 0px;
+  display: block;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.option {
+  background: aliceblue;
+  border: 1px solid #84c5fe;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 21px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 5%;
 }
-
-.App-link {
-  color: #61dafb;
+.option:hover {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score-section {
+  margin-left: 20%;
+  font-size: 30px;
+  padding-top: 40%;
+  font-weight: 700;
+}
+.cong-span {
+  padding-left: 12%;
 }

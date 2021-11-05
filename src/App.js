@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from "react-router-dom";
+import Questions from "./Questions";
+import Prompt from "./Prompt";
+import { Container } from "@mui/material";
+import { Box } from "@mui/system";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <Box textAlign="center" mt={5}>
+        <BrowserRouter>
+          {/* <Switch> */}
+          <Route path="/prompt" component={Prompt} exact></Route>
+          <Route path="/questions" component={Questions}></Route>
+          {/* </Switch> */}
+        </BrowserRouter>
+      </Box>
+    </Container>
   );
-}
+};
 
 export default App;
